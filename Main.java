@@ -11,6 +11,7 @@ class Main
 		for (;;) {
 			System.out.println("Select one of these:\n1 - ADD\n2 - Remove\n3 - List done\n4 - List not done\n5 - Exit");
 			int x = sc.nextInt();
+			System.out.println("-----------------------");
 			if (x == 1) {
 				sc.nextLine();
 				String tmp = sc.nextLine();
@@ -24,23 +25,18 @@ class Main
 					list1.remove(x);
 					list2.add(tmp);
 				} catch (Exception e) {
-					System.out.println("-----------------------");
 					System.out.println("Error in number!");
-					System.out.println("-----------------------");
 				}
 			} else if (x == 3) {
 				for (int i = 0; i < list2.size(); i++) {
-					System.out.println("-----------------------");
 					System.out.println(i + " - " + list2.get(i));
-					System.out.println("-----------------------");
 				}
 			} else if (x == 4) {
 				for (int i = 0; i < list1.size(); i++) {
-					System.out.println("-----------------------");
 					System.out.println(i + " - " + list1.get(i));
-					System.out.println("-----------------------");
 				}
 			} else { break; }
+			System.out.println("-----------------------");
 		}
 
 		return;
